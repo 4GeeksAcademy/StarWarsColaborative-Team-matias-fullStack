@@ -257,6 +257,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			},
 
+			logoutUser: async () =>{
+				try {
+					localStorage.removeItem("token")
+					setStore({auth:false})
+				} catch (error) {
+					console.log(error)
+				}
+			},
+
 			// SIGNUP
 			SignupUser: async (username, email,password, is_active) =>{
 				console.log(" FLUX USER SIGNUP: ", email, " >>>> ", password )

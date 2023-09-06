@@ -5,6 +5,7 @@ import { MdDelete } from "react-icons/md"
 
 import LoginButton from "./loginButton";
 import SignupButton from "./signupButton";
+import LogoutButton from "./logoutButton";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context)
@@ -29,7 +30,9 @@ export const Navbar = () => {
 					<LoginButton />
 					<SignupButton />
 					</div>
-				) : null}
+				) : 
+				<LogoutButton/>
+				}
 
 				<div className="dropdown" >
 					<button className="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
